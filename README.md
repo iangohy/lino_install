@@ -1,5 +1,6 @@
 # Lino Installation   [![Build Status](https://travis-ci.org/linorobot/lino_install.svg?branch=master)](https://travis-ci.org/linorobot/lino_install)
 
+The install file has been updated to enable 2wd/rplidar on ROS noetic. Other settings are not tested.
 
 The `install` file will install all the files you need to build an autonomous robot including:
 - Teensy Firmware

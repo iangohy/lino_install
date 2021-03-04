@@ -83,12 +83,25 @@ sudo apt-get install -y \
 avahi-daemon \
 openssh-server \
 python-setuptools \
-python-dev \
+python3-dev \
 build-essential \
-python-gudev
+# python-gudev
 
-sudo easy_install pip
-sudo python2.7 -m pip install -U platformio
+sudo apt-get install libgudev-1.0-dev
+git clone https://github.com/nzjrs/python-gudev.git
+cd python-gudev
+sudo apt -y install libtool-bin
+sudo apt -y install python-gobject-2-dev
+./autogen.sh 
+make
+sudo make install
+
+# sudo easy_install pip
+# sudo python2.7 -m pip install -U platformio
+# sudo rm -rf $HOME/.platformio/
+
+sudo apt install -y pip3
+sudo pip3 install -U platformio
 sudo rm -rf $HOME/.platformio/
 
 source /opt/ros/$ROSDISTRO/setup.bash
@@ -154,7 +167,12 @@ else
 
     elif [[ "$SENSOR" == "rplidar" ]]
         then
-            sudo apt-get install -y ros-$ROSDISTRO-rplidar-ros
+            # sudo apt-get install -y ros-$ROSDISTRO-rplidar-ros
+
+            cd $HOME/linorobot_ws/src
+            sudo git clone  https://github.com/Slamtec/rplidar_ros.git
+            cd $HOME/linorobot_ws
+            catkin_make
 
     elif [[ "$SENSOR" == "xv11" ]]
         then
