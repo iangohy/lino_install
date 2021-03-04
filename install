@@ -100,7 +100,7 @@ sudo make install
 # sudo python2.7 -m pip install -U platformio
 # sudo rm -rf $HOME/.platformio/
 
-sudo apt install -y pip3
+sudo apt install -y python3-pip
 sudo pip3 install -U platformio
 sudo rm -rf $HOME/.platformio/
 
