@@ -39,7 +39,7 @@ The lidar you're going to use for your build. Valid arguments are
 * Clone the repo and `cd` into the folder
 
   ```
-  https://github.com/iangohy/lino_install.git
+  git clone https://github.com/iangohy/lino_install.git
   cd lino_install
   ```
 
