@@ -33,3 +33,20 @@ The lidar you're going to use for your build. Valid arguments are
 - realsense (not updated for noetic)
 
 :exclamation: Do note that for hokuyo lidar, you will be prompted for the IP address (Default: 192.168.0.10)
+
+## Installation Guide
+
+* Clone the repo and `cd` into the folder
+
+  ```
+  https://github.com/iangohy/lino_install.git
+  cd lino_install
+  ```
+
+* Install
+
+  ```
+  ./install 2wd rplidar
+  ```
+
+  
